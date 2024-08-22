@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --color_fondo: #E9ECF8;
+    --color_fuente_info: #495057;
+    --color_fuente_textarea: #0A3871;
+    --color_blanco: #fff;
+    --color_desencriptar: #D8DFE8;
+    --fuente_inter: 'inter', sans-serif;
+
+    background-color: var(--color_fondo);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    max-width: 10%;
+}
+
+.header__logo {
+    position: absolute;
+    padding: 40px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__textarea {
+    width: 577px;
+    height: auto;
+    overflow-y: hidden;
+    margin: 168px 0 55px 240px;
+    resize: none;
+    font-family: var(--fuente_inter);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color_fuente_textarea);
+    border: none;
+    outline: none;
+    background-color: var(--color_fondo);
+}
+
+textarea::placeholder{
+    color: var(--color_fuente_textarea);
+}
+
+.main__logoinfo {
+    font-family: var(--fuente_inter);
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--color_fuente_info);
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 240px;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.main__botones {
+    width: 680px;
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 0 240px;
+}
+
+.main__encriptar{
+    font-family: var(--fuente_inter);
+    font-size: 1rem;
+    font-weight: 400;
+    width: 328px;
+    background-color: var(--color_fuente_textarea);
+    color: var(--color_blanco);
+    border: none;
+    border-radius: 24px;
+}
+
+.main__desencriptar, #aside__copiar{
+    font-family: var(--fuente_inter);
+    font-size: 1rem;
+    font-weight: 400;
+    width: 328px;
+    background-color: var(--color_desencriptar);
+    color: var(--color_fuente_textarea);
+    border-radius: 24px;
+    border: 1px solid var(--color_fuente_textarea);
+}
+
+.aside {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 40px 40px 80px;
+    width: 400px;
+    height: 620px;
+    background-color: var(--color_blanco);
+    border-radius: 32px;
+    box-shadow: 0 10px 10px 0 #cbcccd;
+}
+
+#aside__texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#resultado {
+    display: none; /* Oculto por defecto */
+    margin: 0;
+    width: 100%; /* Ocupa todo el ancho del aside */
+    height: 100%; /* Ocupa toda la altura del aside */
+    font-family: var(--fuente_inter);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color_fuente_info);
+    align-self: flex-start;
+    justify-self: left;
+}
+
+#textoEncriptado {
+    box-sizing: border-box;
+    margin: none;
+    width: 100%; /* Ocupa todo el ancho del aside */
+    height: 85%; /* Ocupa toda la altura del aside */
+    padding: 32px 32px 0 32px;
+    font-family: var(--fuente_inter);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color_fuente_info);
+    word-wrap: break-word; /* Permite que el texto se ajuste al ancho del contenedor */
+    overflow-wrap: break-word; /* Otra opción para asegurarse de que el texto se ajuste */
+    white-space: pre-wrap;
+}
+
+#aside__copiar {
+    margin: auto;
+    display: none;
+    height: 67px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.aside__subtitulo {
+    font-family: var(--fuente_inter);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 32px 0 16px 0;
+    max-width: 60%;
+    text-align: center;
+}
+
+.aside__parrafo {
+    font-family: var(--fuente_inter);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color_fuente_info);
+    max-width: 60%;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .header {
+        display: flex;
+        width: 100%;
+        height: 5%;
+    }
+    
+    .header__logo {
+        position: relative;
+        padding: 40px 0 40px 0;
+    }
+
+    .main {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        align-items: center;
+    }
+    .main__textarea {
+        box-sizing: border-box;
+        margin: 10px 0 0 0;
+        width: 89%;
+    }
+
+    .main__logoinfo {
+        box-sizing: border-box;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        padding-left: 6%;
+        padding-bottom: 16px;
+    }
+
+    .main__botones, #aside__copiar {
+        margin: 0;
+        width: 90%;
+        height: 67px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .main__encriptar, .main__desencriptar {
+        width: 48%;
+        height: 90%;
+    }
+
+    
+    .aside{
+        box-sizing: border-box;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+    
+    #resultado {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    #textoEncriptado{
+        height: auto;
+        margin-bottom: 20px;
+        padding-right: 6%;
+        word-wrap: break-word; /* Permite que el texto se ajuste al ancho del contenedor */
+        overflow-wrap: break-word; /* Otra opción para asegurarse de que el texto se ajuste */
+        white-space: pre-wrap; /* Mantiene los saltos de línea y permite el ajuste automático del texto */
+    }
+    
+    #aside__copiar {
+        width: 90%;
+        height: 67px;
+        background-color: var(--color_blanco);
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    
+    #muñeco{
+        display: none;
+    }
+    #aside__texto {
+        margin: 40px;
+        padding: 0;
+    }
+
+    #aside__subtitulo, #aside__parrafo {
+        margin: 0;
+        width: 100%;
+    }
+}
