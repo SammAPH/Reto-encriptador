@@ -1,0 +1,38 @@
+# Encriptador de Texto
+
+Este es un encriptador de texto básico que permite encriptar y desencriptar mensajes de texto utilizando un conjunto específico de reglas de reemplazo de caracteres. La aplicación está desarrollada en HTML, CSS y JavaScript y funciona directamente en el navegador.
+
+## Descripción
+
+La aplicación permite al usuario ingresar un texto en un área de texto y luego encriptar o desencriptar el texto usando los botones proporcionados. La encriptación reemplaza ciertas vocales con secuencias de caracteres específicas:
+
+- `a` se convierte en `ai`
+- `e` se convierte en `enter`
+- `i` se convierte en `imes`
+- `o` se convierte en `ober`
+- `u` se convierte en `ufat`
+
+La desencriptación invierte este proceso, devolviendo el texto a su forma original.
+
+## Características
+
+- **Encriptar texto:** Convierte el texto ingresado en un formato encriptado utilizando las reglas de reemplazo.
+- **Desencriptar texto:** Devuelve el texto encriptado a su formato original.
+- **Copiar texto:** Permite copiar el texto encriptado o desencriptado al portapapeles.
+- **Interfaz de usuario:** Interfaz simple y fácil de usar con un área de texto, botones de acción y visualización del resultado.
+
+## Uso
+
+1. **Abrir la página:** Abre el archivo `index.html` en un navegador web compatible.
+2. **Ingresar texto:** Escribe el texto que deseas encriptar o desencriptar en el área de texto proporcionada.
+3. **Encriptar o Desencriptar:** Haz clic en el botón "Encriptar" para transformar el texto utilizando las reglas de encriptación, o en "Desencriptar" para revertir la transformación.
+4. **Copiar texto:** Una vez encriptado o desencriptado, puedes copiar el texto resultante al portapapeles haciendo clic en el botón "Copiar".
+
+## Requisitos
+
+- Un navegador web moderno (como Google Chrome, Mozilla Firefox, Safari, etc.) que soporte JavaScript.
+
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas mejorar esta aplicación, por favor, abre un pull request o crea un issue para discutir los cambios que deseas hacer.
