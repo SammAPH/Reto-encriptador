@@ -5,7 +5,12 @@ function imprimirFrase() {
     // Obtener el texto del textarea
     frase = document.getElementById('text').value;
     console.log('Texto original:', frase);
-    analizarTexto();
+    if(frase.length === 0){
+        alert("El campo no puede estar vacío")
+    }
+    else{
+        analizarTexto();
+    }
 }
 
 function analizarTexto() {
@@ -51,30 +56,36 @@ function analizarTexto() {
 
 function desencriptarTexto() {
     let textoEncriptado = document.getElementById('text').value;
-    let textoDesencriptado = textoEncriptado
-        .replace(/ai/g, 'a')
-        .replace(/enter/g, 'e')
-        .replace(/imes/g, 'i')
-        .replace(/ober/g, 'o')
-        .replace(/ufat/g, 'u');
-
-    // Ocultar la imagen y texto por defecto
-    const muneco = document.getElementById('muñeco');
-    const asideTexto = document.getElementById('aside__texto');
-    const resultadoDiv = document.getElementById('resultado');
-    const textoEncriptadoP = document.getElementById('textoEncriptado');
-    const botonCopiar = document.getElementById('aside__copiar');
-
-    if (muneco) {
-        muneco.style.display = 'none';
+    if(textoEncriptado.length === 0){
+        alert("El campo no puede estar vacío")
     }
-    if (asideTexto) {
-        asideTexto.style.display = 'none';
-    }
+    else{
 
-    textoEncriptadoP.innerText = textoDesencriptado;
-    resultadoDiv.style.display = 'block';
-    botonCopiar.style.display = 'block';
+        let textoDesencriptado = textoEncriptado
+            .replace(/ai/g, 'a')
+            .replace(/enter/g, 'e')
+            .replace(/imes/g, 'i')
+            .replace(/ober/g, 'o')
+            .replace(/ufat/g, 'u');
+
+        // Ocultar la imagen y texto por defecto
+        const muneco = document.getElementById('muñeco');
+        const asideTexto = document.getElementById('aside__texto');
+        const resultadoDiv = document.getElementById('resultado');
+        const textoEncriptadoP = document.getElementById('textoEncriptado');
+        const botonCopiar = document.getElementById('aside__copiar');
+
+        if (muneco) {
+            muneco.style.display = 'none';
+        }
+        if (asideTexto) {
+            asideTexto.style.display = 'none';
+        }
+
+        textoEncriptadoP.innerText = textoDesencriptado;
+        resultadoDiv.style.display = 'block';
+        botonCopiar.style.display = 'block';
+    }
 }
 
 
